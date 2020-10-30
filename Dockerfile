@@ -14,6 +14,9 @@ RUN apt-get update \
         wget \
         ca-certificates \
         git \
+        ubuntu-drivers \
+        autoinstall \
+        nvidia-driver-450 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
