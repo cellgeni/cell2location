@@ -6,9 +6,8 @@ LABEL maintainer="Vitalii Kleshchevnikov <vitalii.kleshchevnikov@sanger.ac.uk>"
 LABEL description="High-throughput spatial mapping of cell types."
 
 # install os packages
-RUN DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y -qq update \
-    && apt-get install --no-install-recommends -y -qq \
+RUN apt-get -y -qq update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y -qq \
         curl \
         unzip \
         g++ \
